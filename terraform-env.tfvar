@@ -1,0 +1,16 @@
+#variable "aws_region" {
+#  type    = map(string)
+#  prod    = "ap-south-1"
+#  prod-dr = "ap-south-1"
+#}
+
+variable "ami" {
+  type    = map(string)
+  prod    = "ami-074dc0a6f6c764218"
+  prod-dr = "ami-0af2f764c580cc1f9"
+}
+variable "workspaces-name" {
+   type    = string
+   prod = "terraform-test-workspace-prod"
+   prod-dr = "terraform-test-workspace-prod-dr"
+}
