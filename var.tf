@@ -2,6 +2,12 @@ variable "aws_region" {
   default = ""
 }
 
+variable "ami" {
+  type           = map(string)
+  ap-south-1     = "ami-074dc0a6f6c764218"
+  ap-southeast-1 = "ami-0af2f764c580cc1f9"
+}
+
 variable "aws_vpc_cidr" {
   type    = string
   default = "10.20.0.0/16"
