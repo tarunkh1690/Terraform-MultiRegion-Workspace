@@ -1,5 +1,5 @@
 variable "aws_region" {
-   default = ""
+  default = ""
 }
 
 variable "aws_vpc_cidr" {

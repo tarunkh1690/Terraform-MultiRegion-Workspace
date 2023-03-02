@@ -8,8 +8,8 @@ resource "aws_subnet" "k8s-private-subnet" {
   depends_on              = [aws_vpc.k8s-vpc]
 
   tags = {
-    Name                              = "${local.name_prefix}-private-subnet-${data.aws_availability_zones.available.names[count.index]}"
-    subnet-type                       = "private"
+    Name        = "${local.name_prefix}-private-subnet-${data.aws_availability_zones.available.names[count.index]}"
+    subnet-type = "private"
   }
 }
 
@@ -24,7 +24,7 @@ resource "aws_subnet" "k8s-public-subnet" {
   depends_on              = [aws_vpc.k8s-vpc]
 
   tags = {
-    Name                           = "${local.name_prefix}-public-subnet-${data.aws_availability_zones.available.names[count.index]}"
-    subnet-type                    = "public"
+    Name        = "${local.name_prefix}-public-subnet-${data.aws_availability_zones.available.names[count.index]}"
+    subnet-type = "public"
   }
 }
