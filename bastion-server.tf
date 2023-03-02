@@ -1,6 +1,6 @@
 resource "aws_instance" "bastion" {
   count                  = 1
-  ami                    = "ami-074dc0a6f6c764218" 
+  ami                    = var.ami[var.aws_region] 
   instance_type          = "t2.micro"
   key_name               = "k8s-cluster-key"
   vpc_security_group_ids = [aws_security_group.k8s_cluster_sg.id]
