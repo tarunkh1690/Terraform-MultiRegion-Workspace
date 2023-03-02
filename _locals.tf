@@ -1,7 +1,7 @@
 locals {
   common_tags = {
     project     = "terraform-workspaces-check"
-    environment = var.workspaces-name[var.aws_region]
+    environment = terraform.workspace
   }
   name_prefix = "${var.name}-${terraform.workspace}"
 }
