@@ -5,7 +5,7 @@ terraform {
     organization = "tarun_org"
 
     workspaces {
-      name = "terraform-test-workspace-"
+      name = "Terraform-MultiRegion-Workspace-"
     }
   }
 }
